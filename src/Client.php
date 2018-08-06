@@ -209,6 +209,8 @@ class Client
      *      }
      *  }
      * }
+     * @param Parcel $parcel
+     * @return stdClass
      */
     public function getLabel(Parcel $parcel): stdClass
     {
