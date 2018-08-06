@@ -1,5 +1,5 @@
 {
-    "name": "nebijokit/omniva",
+    "name": "sf4/omnivabundle",
     "description": "Library to communicate with Omniva API",
     "type": "library",
     "require": {
