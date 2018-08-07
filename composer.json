@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sf4\OOmnivaBundle\\": "/"
+            "Sf4\OOmnivaBundle\\": "src/"
         }
     },
     "license": "MIT",
