@@ -11,6 +11,36 @@ PHP wrapper for courier [Omniva integration](https://www.omniva.ee/public/files/
 
 ## Examples
 
+```
+$client = new \SoapClient('https://edixml.post.ee/epmx/services/messagesService.wsdl', array('login' => 'xxx', 'password' => 'xxx'));
+/** @noinspection PhpUndefinedMethodInspection */
+$request = $client->preSendMsg([
+    'partner' => '24432',
+    'interchange' => [
+        'header' => [
+            'file_id' => date('Ymd'),
+            'sender_cd' => '24432'
+        ],
+        'item_list' => [
+            [
+                'id' => 'JJEE2443256789',
+                'service' => 'PU',
+                'comment' =>  "Comment",
+                'receiverAddressee' => [
+                    'person_name' => "xxx xxx",
+                    'mobile' => '+372xxx',
+                    'address' => ['offloadPostcode' => '96079'],
+                ],
+                'measures' => ['weight' => '0'],
+                'add_service' => [
+                    'option' => ['code' => 'ST'],
+                ],
+            ],
+        ],
+    ],
+]);
+```
+
 ### Get label
 
 Returns Label response (`stdClass` object) with encoded PDF & barcode. For Response structure view `getLabel` phpdoc.
