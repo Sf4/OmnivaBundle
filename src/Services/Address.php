@@ -98,9 +98,9 @@ class Address
 
     /**
      * Get email
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -138,9 +138,9 @@ class Address
 
     /**
      * Get country code
-     * @return string
+     * @return string|null
      */
-    public function getCountryCode(): string
+    public function getCountryCode(): ?string
     {
         return $this->country;
     }
@@ -179,9 +179,9 @@ class Address
 
     /**
      * Get city
-     * @return string
+     * @return string|null
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -199,9 +199,9 @@ class Address
 
     /**
      * Get street
-     * @return string
+     * @return string|null
      */
-    public function getStreet(): string
+    public function getStreet(): ?string
     {
         return $this->street;
     }
@@ -219,9 +219,9 @@ class Address
 
     /**
      * Get post code
-     * @return string
+     * @return string|null
      */
-    public function getPostCode(): string
+    public function getPostCode(): ?string
     {
         return $this->postcode;
     }

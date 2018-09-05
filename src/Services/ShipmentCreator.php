@@ -114,9 +114,9 @@ class ShipmentCreator
 
     /**
      * Set partner
-     * @param string $partner
+     * @param string|null $partner
      */
-    public function setPartner(string $partner): void
+    public function setPartner(string $partner = null): void
     {
         $this->partner = $partner;
     }

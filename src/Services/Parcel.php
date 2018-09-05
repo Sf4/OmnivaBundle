@@ -72,9 +72,9 @@ class Parcel
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getWeight(): float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
@@ -99,9 +99,9 @@ class Parcel
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
@@ -117,9 +117,9 @@ class Parcel
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPartnerId(): string
+    public function getPartnerId(): ?string
     {
         return $this->partnerId;
     }
@@ -153,9 +153,9 @@ class Parcel
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getBankAccount(): string
+    public function getBankAccount(): ?string
     {
         return $this->bankAccount;
     }
@@ -197,9 +197,9 @@ class Parcel
     }
 
     /**
-     * @return Address
+     * @return Address|null
      */
-    public function getSender(): Address
+    public function getSender(): ?Address
     {
         return $this->sender;
     }
@@ -215,9 +215,9 @@ class Parcel
     }
 
     /**
-     * @return Address
+     * @return Address|null
      */
-    public function getReceiver(): Address
+    public function getReceiver(): ?Address
     {
         return $this->receiver;
     }
@@ -233,9 +233,9 @@ class Parcel
     }
 
     /**
-     * @return Address
+     * @return Address|null
      */
-    public function getReturnee(): Address
+    public function getReturnee(): ?Address
     {
         return $this->returnee;
     }
@@ -259,9 +259,9 @@ class Parcel
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTrackingNumber(): string
+    public function getTrackingNumber(): ?string
     {
         return $this->trackingNumber;
     }

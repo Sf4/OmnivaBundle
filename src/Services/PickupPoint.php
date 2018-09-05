@@ -34,9 +34,9 @@ class PickupPoint
 
     /**
      * Get identifier
-     * @return string
+     * @return string|null
      */
-    public function getIdentifier(): string
+    public function getIdentifier(): ?string
     {
         return $this->identifier;
     }

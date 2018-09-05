@@ -129,9 +129,11 @@ class ItemCreator
      */
     protected function writeMeasures(XMLWriter $writer, Parcel $parcel)
     {
-        $writer->startElement('measures');
-        $writer->writeAttribute('weight', $parcel->getWeight());
-        $writer->endElement();
+        if($parcel->getWeight()) {
+            $writer->startElement('measures');
+            $writer->writeAttribute('weight', $parcel->getWeight());
+            $writer->endElement();
+        }
     }
 
     /**
@@ -174,7 +176,9 @@ class ItemCreator
      */
     protected function writePartnerId(XMLWriter $writer, Parcel $parcel)
     {
-        $writer->writeElement('partnerId', $parcel->getPartnerId());
+        if($parcel->getPartnerId()) {
+            $writer->writeElement('partnerId', $parcel->getPartnerId());
+        }
     }
 
     /**
@@ -185,11 +189,13 @@ class ItemCreator
      */
     protected function writeReceiverAddressee(XMLWriter $writer, Parcel $parcel, $pickupPoint)
     {
-        $writer->startElement('receiverAddressee');
+        if($parcel->getReceiver()) {
+            $writer->startElement('receiverAddressee');
 
-        $this->writeAddress($writer, $parcel->getReceiver());
+            $this->writeAddress($writer, $parcel->getReceiver());
 
-        $writer->endElement();
+            $writer->endElement();
+        }
     }
 
     /**
@@ -199,11 +205,13 @@ class ItemCreator
      */
     protected function writeReturnAddressee(XMLWriter $writer, Parcel $parcel)
     {
-        $writer->startElement('returnAddressee');
+        if($parcel->getReturnee()) {
+            $writer->startElement('returnAddressee');
 
-        $this->writeAddress($writer, $parcel->getReturnee());
+            $this->writeAddress($writer, $parcel->getReturnee());
 
-        $writer->endElement();
+            $writer->endElement();
+        }
     }
 
     protected function writeAddress(XMLWriter $writer, Address $address)
@@ -230,11 +238,13 @@ class ItemCreator
      */
     protected function writeOnLoadAddressee(XMLWriter $writer, Parcel $parcel)
     {
-        $writer->startElement('onloadAddressee');
+        if($parcel->getSender()) {
+            $writer->startElement('onloadAddressee');
 
-        $this->writeAddress($writer, $parcel->getSender());
+            $this->writeAddress($writer, $parcel->getSender());
 
-        $writer->endElement();
+            $writer->endElement();
+        }
     }
 
 }
