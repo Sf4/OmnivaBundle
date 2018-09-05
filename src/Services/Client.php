@@ -49,11 +49,11 @@ class Client
      * Create shipment
      * @param Parcel $parcel
      * @param string $clientCode
-     * @param string $partnerId
+     * @param string|null $partnerId
      * @param string|null $messageType
      * @return mixed
      */
-    public function createShipment(Parcel $parcel, string $clientCode, string $partnerId, string $messageType = null)
+    public function createShipment(Parcel $parcel, string $clientCode, string $partnerId = null, string $messageType = null)
     {
         $shipmentCreator = new ShipmentCreator($parcel);
         $shipmentCreator->setClientCode($clientCode);
